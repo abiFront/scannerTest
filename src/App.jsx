@@ -4,11 +4,15 @@ import './App.css'
 import { Html5Qrcode } from 'html5-qrcode'
 
 function App() {
-  const [codes, setcodes] = useState(['pepe', 'juanito'])
+  const [codes, setcodes] = useState([])
   const [showScanner, setshowScanner] = useState(false)
 
   const handleShow = () =>{
     setshowScanner(true)
+  }
+
+  const handleAddCodes = (value) =>{
+    setcodes([...codes, value])
   }
 
   const config = {
@@ -28,7 +32,8 @@ function App() {
            config,
            (value) => {
              console.log('Add tag Modal barcode result ===> ', value)
-             setcodes([...codes, value])
+             handleAddCodes(value)
+             console.log('codes: ',codes)
              // setOpenScanner(false)
 
            }
