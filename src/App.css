@@ -1,11 +1,16 @@
- #root {
+ 
+ #root{
+   width: 100%;
+ }
+ 
+ .app-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid #dfdfdf;
   border-radius: 8px;
-  width: 100%;
+  width: 80%;
   height: 489px;
   margin: 64px auto 19px auto;
 }
