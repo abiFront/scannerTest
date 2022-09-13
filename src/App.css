@@ -33,6 +33,11 @@
   text-align: center;
 }
 
+.codes-cont{
+  width: 80%;
+  margin:auto;
+}
+
 @media (max-width: 600px) {
   body{
     overflow-x: hidden;
