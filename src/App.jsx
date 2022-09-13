@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
 import { Html5Qrcode } from 'html5-qrcode'
 
@@ -14,7 +14,7 @@ function App() {
 
   const handleAddCodes = (value) => {
     setCodes(codes => [...codes, value])
-    console.log('en el hadleCodes: ', codes)
+    //console.log('en el hadleCodes: ', codes)
   }
 
   const config = {
@@ -36,14 +36,14 @@ function App() {
     if (showScanner) {
       Html5Qrcode.getCameras().then((devices) => {
         html5QrCode = new Html5Qrcode('qrcode-scanner')
-        console.log(html5QrCode)
+       // console.log(html5QrCode)
         if (devices && devices.length) {
           html5QrCode.start(
             { facingMode: 'environment' },
             config,
             (value) => {
 
-              console.log('Add tag Modal barcode result ===> ', value)
+             // console.log('Add tag Modal barcode result ===> ', value)
 
               setvalueInserted(value)
 
